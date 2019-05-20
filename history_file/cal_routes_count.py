@@ -13,5 +13,6 @@ def cal_routes_count(adj_matrix: list):
             route = adj_matrix[index][j]
             train: list = route['train']
             air: list = route['air']
-            ret[index].append(len(train) + len(air))
+            bullet: list = route['bullet']
+            ret[index].append(len(train) + len(air) + len(bullet))
     return ret

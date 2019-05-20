@@ -1,5 +1,5 @@
 from population import Population
-from cal_routes_count import cal_routes_count
+from history_file.cal_routes_count import cal_routes_count
 from chromosome import Chromosome
 
 

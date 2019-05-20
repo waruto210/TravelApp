@@ -6,7 +6,7 @@ import numpy as np
 class TabuSearch:
     def __init__(self, adj_matrix: list, from_to: list, depart_time: int, time_limit: int,
                  routes_count: list, max_iteration: int = 1, candidates_num: int = 200,
-                 tabu_length: int = 2, route_length: int = 4):
+                 tabu_length: int = 2, route_length: int = 4, vehicle: str = ''):
         """
 
         :param adj_matrix:
@@ -25,10 +25,12 @@ class TabuSearch:
         self.tabu_length = tabu_length
         self.route_length = route_length
         self.from_to = from_to
-        self.adj_matrix = adj_matrix
+        self.adj_matrix = list(adj_matrix)
         self.depart_time = depart_time
         self.time_limit = time_limit
         self.routes_count = routes_count
+        self.vehicle = vehicle
+
         self.best_cities = []
         self.best_routes = []
         self.cities_now = []
@@ -38,6 +40,26 @@ class TabuSearch:
         self.scores = [int] * candidates_num
         self.best_score = sys.maxsize
         self.init()
+
+    def low_high(self, f: int, t: int):
+        train_routes = self.adj_matrix[f][t]['train']
+        air_routes = self.adj_matrix[f][t]['air']
+        if self.vehicle == '':
+            low = 0
+            high = self.routes_count[f][t] - 1
+        elif self.vehicle == 'train':
+            low = 0
+            high = len(train_routes) - 1
+        elif self.vehicle == 'air':
+            low = len(train_routes)
+            high = len(train_routes) + len(air_routes) - 1
+        else:
+            low = len(train_routes) + len(air_routes)
+            high = self.routes_count[f][t] - 1
+        if high < low:
+            low = 0
+            high = self.routes_count[f][t] - 1
+        return low, high
 
     def init(self):
         start: int = self.from_to[0]
@@ -57,7 +79,11 @@ class TabuSearch:
             t = self.cities_now[i + 1]
             # print("f: " + str(f) + " t: " + str(t))
             # print(routes_count[f][t])
-            route_num: int = random.randint(0, self.routes_count[f][t] - 1)
+            low, high = self.low_high(f, t)
+            if low == high:
+                route_num = low
+            else:
+                route_num: int = random.randint(low, high)
             self.routes_now.append(route_num)
 
     def generate_candi(self):
@@ -75,8 +101,17 @@ class TabuSearch:
                             and self.routes_count[city][t] > 0:
                         break
                 cities[pos] = city
-                routes[pos - 1] = random.randint(0, self.routes_count[f][city] - 1)
-                routes[pos] = random.randint(0, self.routes_count[city][t] - 1)
+                low1, high1 = self.low_high(f, city)
+                if low1 == high1:
+                    routes[pos - 1] = low1
+                else:
+                    # print("low1 ", low1, "high1 ", high1)
+                    routes[pos - 1] = random.randint(low1, high1)
+                low2, high2 = self.low_high(city, t)
+                if low2 == high2:
+                    routes[pos] = low2
+                else:
+                    routes[pos] = random.randint(low2, high2)
             else:
                 if self.route_length > 1:
                     pos = random.randint(0, self.route_length - 1)
@@ -84,7 +119,11 @@ class TabuSearch:
                     pos = 0
                 f = self.cities_now[pos]
                 t = self.cities_now[pos + 1]
-                routes[pos] = random.randint(0, self.routes_count[f][t] - 1)
+                low, high = self.low_high(f, t)
+                if low == high:
+                    routes[pos] = low
+                else:
+                    routes[pos] = random.randint(low, high)
             self.candidates_list[i] = (cities, routes)
 
     def cal_score(self, cities: list, routes: list):
@@ -105,12 +144,18 @@ class TabuSearch:
             real_routes: dict = self.adj_matrix[f][t]
             train: list = real_routes['train']
             air: list = real_routes['air']
+            bullet: list = real_routes['bullet']
             # print("Routes_count: " + str(self.routes_conut[f][t]) + "route_num: " + str(route_num))
-            if route_num >= len(train):
+            if route_num < len(train):
+                one_route: dict = train[route_num]
+            elif len(train) <= route_num < len(train) + len(air):
                 route_num = route_num - len(train)
                 one_route: dict = air[route_num]
             else:
-                one_route: dict = train[route_num]
+                route_num = route_num - (len(train) + len(air))
+                # print(route_num)
+                one_route: dict = bullet[route_num]
+
             d_time = one_route['depart_time']
             l_time = one_route['length_time']
             if d_time >= go_time:

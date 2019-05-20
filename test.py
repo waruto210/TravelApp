@@ -34,3 +34,7 @@ import time
 #     a = random.randint(0, 100)
 # time4 = time.time()
 # print('cost is ', time4-time3)
+t = [dict] * 10
+
+if not t[0]:
+    print("here")
