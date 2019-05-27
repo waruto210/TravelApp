@@ -59,8 +59,8 @@ class TabuAlgorithm:
         from_to = pass_cities[sorted_scores_index[0]]
         routes = routes_num[sorted_scores_index[0]]
     
-        route_length = sorted_scores_index[0] + 1
-        for i in range(route_length):
+        route_l = sorted_scores_index[0] + 1
+        for i in range(route_l):
             f = from_to[i]
             t = from_to[i + 1]
             route_num = routes[i]
@@ -84,4 +84,4 @@ class TabuAlgorithm:
             by: str = one_route['type']
             seg = TravelRoute(by=by, code=code, price=price, des=des, depart_time=depart_time, duration=duration)
             result.append(seg)
-        return result, search.best_score
+        return result, np.min(scores)

@@ -85,6 +85,8 @@ class TabuSearch:
             else:
                 route_num: int = random.randint(low, high)
             self.routes_now.append(route_num)
+        self.best_cities = list(self.cities_now)
+        self.best_routes = list(self.routes_now)
 
     def generate_candi(self):
         for i in range(self.candidates_num):
