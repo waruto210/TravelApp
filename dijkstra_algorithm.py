@@ -12,11 +12,11 @@ class Dijkstra:
     def cal_weight_by_price(train_route: list, air_route: list, bullet_route: list, vehicle: str = ''):
         """
 
-        :param train_route:
-        :param air_route:
-        :param bullet_route:
-        :param vehicle:
-        :return:
+        :param train_route: 火车线路集合
+        :param air_route: 飞机线路集合
+        :param bullet_route: 动车线路集合
+        :param vehicle: 优先交通工具
+        :return: 权最小的线路
         """
         min_price = [sys.maxsize] * 3
         min_dict = [{}] * 3
@@ -49,12 +49,12 @@ class Dijkstra:
     def cal_weight_by_time(d_time: int, train_route: list, air_route: list, bullet_route: list, vehicle: str = ''):
         """
         
-        :param d_time: 
-        :param train_route: 
-        :param air_route: 
-        :param bullet_route: 
-        :param vehicle: 
-        :return: 
+        :param d_time: 最早出发时间
+        :param train_route: 火车线路集合
+        :param air_route: 飞机线路集合
+        :param bullet_route: 动车线路集合
+        :param vehicle: 优先交通工具
+        :return: 权最小的值
         """
 
         min_time = [sys.maxsize] * 3

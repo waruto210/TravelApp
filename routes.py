@@ -4,12 +4,12 @@ class TravelRoute:
                  timelimit_satisfy: bool = True):
         """
 
-        :param by:
-        :param code:
-        :param price:
-        :param des:
-        :param depart_time:
-        :param duration:
+        :param by: 交通工具
+        :param code: 编号
+        :param price: 价格
+        :param des: 目的地
+        :param depart_time: 出发时间
+        :param duration: 时长
         :param is_tag: 标志该对象是否为标志
         :param stay: 停留多久
         :param timelimit_satisfy: 是否满足了用户的时间限制

@@ -10,8 +10,8 @@ class TabuAlgorithm:
 
     def cal_routes_count(self):
         """
-
-        :return:
+        计算adj_matrix的所有邻接点之间的路径数量
+        :return: ret[i][j]表城市i到j的线路数量
         """
         ret: list = []
         for index in range(31):
@@ -28,20 +28,22 @@ class TabuAlgorithm:
     
     def search_by_tabu(self, from_to: list, depart_time: int, time_limit: int, vehicle: str = '') -> tuple:
         """
-
-        :param from_to:
-        :param depart_time:
-        :param time_limit:
-        :param vehicle:
-        :return:
+        禁忌搜索算法分别搜索长度为1, 2, 3的路
+        :param from_to: 起点, 终点
+        :param depart_time: 最早出发时间
+        :param time_limit: 时间限制
+        :param vehicle: 优先交通工具
+        :return: 最优路径及其价格开销
         """
         # 禁忌搜索参数
         max_iteration: int = 200
         candidates_num: int = 20
         tabu_length: int = 15
-
+        # 计算路线数
         routes_count = self.cal_routes_count()
+        # 起点终点
         from_to = [label[from_to[0]], label[from_to[1]]]
+        # 分别记录开销,经过城市,城市间路线序号,最终结果
         scores = []
         pass_cities = []
         routes_num = []
@@ -55,11 +57,13 @@ class TabuAlgorithm:
             scores.append(a)
             pass_cities.append(b)
             routes_num.append(c)
+        # 对开销排序,取开销最小的线路方案
         sorted_scores_index = np.argsort(scores)
         from_to = pass_cities[sorted_scores_index[0]]
         routes = routes_num[sorted_scores_index[0]]
-    
+        # 获取最优路径的长度
         route_l = sorted_scores_index[0] + 1
+
         for i in range(route_l):
             f = from_to[i]
             t = from_to[i + 1]
@@ -68,6 +72,7 @@ class TabuAlgorithm:
             train: list = real_routes['train']
             air: list = real_routes['air']
             bullet: list = real_routes['bullet']
+            # 找到路径序号对应的真实路径
             if route_num < len(train):
                 one_route: dict = train[route_num]
             elif len(train) <= route_num < len(train) + len(air):
@@ -76,6 +81,7 @@ class TabuAlgorithm:
             else:
                 route_num = route_num - len(train) - len(air)
                 one_route: dict = bullet[route_num]
+            # 生成路径对象
             code: str = one_route['number']
             price: int = one_route['price']
             des: str = one_route['to']
