@@ -114,16 +114,16 @@ class Traveler(object):
 # 以下测试代码
 
 
-# T = Traveler()
-# ret: [TravelRoute] = T.search_plan(
-#     cities=['北京', ['重庆', 48], ['乌鲁木齐', 44], ['长沙', 25], ['北京', 20]],
-#     depart_time=13, mode='best_price', vehicle='')
-# for r in ret:
-#     if not r.is_tag:
-#         print(r.by, r.code, r.price, r.des, r.depart_time, r.duration)
-#     else:
-#         if r.is_tag:
-#             print("Stay for ", r.stay)
-#             print('\n')
-#             if not r.timelimit_satisfy:
-#                 print("Sorry, following travel time limitation not satisfied!")
+T = Traveler()
+ret: [TravelRoute] = T.search_plan(
+    cities=['北京', ['重庆', 48], ['乌鲁木齐', 44], ['长沙', 25], ['北京', 20]],
+    depart_time=13, mode='best_time', vehicle='')
+for r in ret:
+    if not r.is_tag:
+        print(r.by, r.code, r.price, r.des, r.depart_time, r.duration)
+    else:
+        if r.is_tag:
+            print("Stay for ", r.stay)
+            print('\n')
+            if not r.timelimit_satisfy:
+                print("Sorry, following travel time limitation not satisfied!")

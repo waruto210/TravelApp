@@ -14,7 +14,6 @@ class TravelRoute:
         :param stay: 停留多久
         :param timelimit_satisfy: 是否满足了用户的时间限制
         """
-        # 参数分别为方式,为"A"或"T",车次航班编号，票价，到达地
         self.by = by
         self.code = code
         self.price = price
