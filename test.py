@@ -22,6 +22,7 @@
 # a = [1, 2, 4, 0]
 # print(np.argsort(a))
 import numpy as np
+import itertools
 import random
 import time
 # time1 = time.time()
@@ -38,4 +39,8 @@ import time
 #
 # if not t[0]:
 #     print("here")
-
+b = [1, 2, 3, 4]
+a = list(itertools.permutations([4, 5, 6], 3))
+print(a)
+random.shuffle(a)
+print(a)

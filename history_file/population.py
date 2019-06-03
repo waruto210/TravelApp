@@ -1,4 +1,4 @@
-from chromosome import Chromosome
+from history_file.chromosome import Chromosome
 from label import label
 import random as rd
 import copy

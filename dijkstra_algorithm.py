@@ -138,17 +138,24 @@ class Dijkstra:
             train_route = self.adj_matrix[start][city]['train']
             air_route = self.adj_matrix[start][city]['air']
             bullet_route = self.adj_matrix[start][city]['bullet']
+
+            # 若两地间无优先交通工具，取消优先
+            if vehicle and not self.adj_matrix[start][city][vehicle]:
+                tmp_vehivle = ''
+            else:
+                tmp_vehivle = vehicle
+
             if mode == "best_time":
                 weight_dict, weight = self.cal_weight_by_time(d_time=depart,
                                                               train_route=train_route, 
                                                               air_route=air_route,
                                                               bullet_route=bullet_route, 
-                                                              vehicle=vehicle)
+                                                              vehicle=tmp_vehivle)
             elif mode == "best_price":
                 weight_dict, weight = self.cal_weight_by_price(train_route=train_route,
                                                                air_route=air_route, 
                                                                bullet_route=bullet_route,
-                                                               vehicle=vehicle)
+                                                               vehicle=tmp_vehivle)
             if not weight_dict:
                 distance[city] = sys.maxsize
             else:
@@ -183,18 +190,25 @@ class Dijkstra:
                     train_route: list = self.adj_matrix[new_city][j]['train']
                     air_route: list = self.adj_matrix[new_city][j]['air']
                     bullet_route: list = self.adj_matrix[new_city][j]['bullet']
+
+                    # 若两地间无优先交通工具，取消优先
+                    if vehicle and not self.adj_matrix[new_city][j][vehicle]:
+                        tmp_vehivle = ''
+                    else:
+                        tmp_vehivle = vehicle
+
                     if mode == "best_time":
                         depart = d_time_list[new_city]
                         weight_dict, weight = self.cal_weight_by_time(d_time=depart, 
                                                                       train_route=train_route,
                                                                       air_route=air_route, 
                                                                       bullet_route=bullet_route,
-                                                                      vehicle=vehicle)
+                                                                      vehicle=tmp_vehivle)
                     elif mode == "best_price":
                         weight_dict, weight = self.cal_weight_by_price(train_route=train_route, 
                                                                        air_route=air_route,
                                                                        bullet_route=bullet_route, 
-                                                                       vehicle=vehicle)
+                                                                       vehicle=tmp_vehivle)
 
                     if weight_dict:
                         if distance[j] > (distance[new_city] + weight):
@@ -222,7 +236,8 @@ class Dijkstra:
             depart_time: int = r['depart_time']
             duration: int = r['length_time']
             by: str = r['type']
-            seg = TravelRoute(by=by, code=code, price=price, des=des, depart_time=depart_time, duration=duration)
+            seg = TravelRoute(by=by, code=code, price=price, des=des,
+                              depart_time=depart_time, duration=duration)
             result.append(seg)
 
         return result, distance[destination]

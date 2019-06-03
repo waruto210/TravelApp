@@ -1,6 +1,6 @@
-from population import Population
+from history_file.population import Population
 from history_file.cal_routes_count import cal_routes_count
-from chromosome import Chromosome
+from history_file.chromosome import Chromosome
 
 
 def search_by_ga(adj_matrix: list, cities: list, depart_time: int, time_limit, epoch: int, route_length: int,

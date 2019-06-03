@@ -3,6 +3,8 @@ from dijkstra_algorithm import Dijkstra
 from tabu_algorithm import TabuAlgorithm
 from routes import TravelRoute
 import sys
+import itertools
+import random
 
 
 class Traveler(object):
@@ -16,57 +18,99 @@ class Traveler(object):
         self.TabuAlgorithm = TabuAlgorithm(adj_matrix=self.map.adj_matrix)
 
     def search_plan(self, cities: list, depart_time: int, vehicle: str = '',
-                    mode: str = 'best_time'):
+                    mode: str = 'best_time', ordered: bool = True):
         """
 
         :param cities: 形式[出发地, [城市1 时间限制(策略3才有) 停留时间] [出发地2, 时间限制 停留时间], ...]
         :param depart_time: 出发时间
         :param vehicle: 分别为air bullet train
         :param mode: best_time best_price three
+        :param ordered: 旅行顺序是否按照输入顺序，默认有序且策略三必须有序
         :return: 返回[TravelRoute],当TravelRoute对象的is_tag为True时,表示这为一个标志,指示其前的
                 一段旅程到达后停留多久(stay),帮助前端计算用,是否满足了用户的时间限制(timelimit_satisfy, 策略3时显示给用户)
                 若返回了[]，则表示即使算法自动放宽了搜索要求仍旧无法搜索到路径，告知用户。
 
         """
-        # 最终结果
-        ret = []
+        # 用户连续输入两个一样的城市，返回空
+        for i in range(len(cities) - 1):
+            if i == 0:
+                f = cities[i]
+            else:
+                f = cities[i][0]
+            t = cities[i + 1][0]
+            if f == t:
+                return []
         # 策略1,2
         if mode != 'three':
-            # 初始最早可出发时间
-            d_time = depart_time
-            for i in range(len(cities) - 1):
-                # 获取起点终点
-                if i == 0:
-                    start = cities[0]
-                else:
-                    start = cities[i][0]
-                des = cities[i + 1][0]
-                # 第一次搜索
-                tmp, cost = self.Dijkstra.search_by_dijkstra(
-                    mode=mode, from_to=[start, des],
-                    depart_time=d_time, vehicle=vehicle)
-                # 如果未搜到路径
-                if cost == sys.maxsize:
-                    # 且交通工具有优先要求，则去除交通工具优先请求，重新搜索
-                    if vehicle != '':
-                        tmp, cost = self.Dijkstra.search_by_dijkstra(
-                            mode=mode, from_to=[start, des],
-                            depart_time=d_time, vehicle='')
-                # 仍未搜索到路径，返回空
-                if cost == sys.maxsize:
-                    return []
-                # 将本段路径加入最终线路
-                ret.extend(tmp)
-                # 生成一个段标志对象
-                stay = cities[i + 1][1]
-                t_1 = TravelRoute(by='', code='', price=0, des='', depart_time=-1,
-                                  duration=-1, is_tag=True, stay=stay)
-                ret.append(t_1)
-                # 更新最早可出发时间
-                d_time = (d_time + cost + stay) % 24
-            return ret
+
+            # 最佳开销和最佳路线（乱序）
+            best_cost = sys.maxsize
+            best_routes: list = []
+            all_pass = cities[1:]
+            if not ordered:
+                # 生成途径城市全排列
+                permutation = list(itertools.permutations(all_pass, len(all_pass)))
+                # 打乱
+                random.shuffle(permutation)
+            else:
+                # 保证其为一个列表嵌套列表
+                permutation = [all_pass]
+            # print(permutation)
+            # 计数器，防止穷举次数过多
+            iteration: int = 0
+            for passes in permutation:
+                # print(passes)
+                # 搜索次数过多，退出
+                if iteration > 40:
+                    break
+                # 记录当前路径开销，路线
+                tmp_total_cost: int = 0
+                tmp_routes: list = []
+                # 旅行城市列表
+                tmp_cities = [cities[0]]
+                tmp_cities.extend(list(passes))
+                # print(tmp_cities)
+                # 初始最早可出发时间
+                d_time = depart_time
+                for i in range(len(tmp_cities) - 1):
+                    # 获取起点终点
+                    if i == 0:
+                        start = tmp_cities[0]
+                    else:
+                        start = tmp_cities[i][0]
+                    des = tmp_cities[i + 1][0]
+                    # print(start, des)
+                    # 第一次搜索
+                    tmp, cost = self.Dijkstra.search_by_dijkstra(
+                        mode=mode, from_to=[start, des],
+                        depart_time=d_time, vehicle=vehicle)
+
+                    # 未搜索到路径，返回空
+                    if cost == sys.maxsize:
+                        return []
+                    # 将本段路径加入最终线路
+                    tmp_routes.extend(tmp)
+                    tmp_total_cost += cost
+                    # 及时退出
+                    if tmp_total_cost > best_cost:
+                        break
+                    # 生成一个段标志对象
+                    stay = tmp_cities[i + 1][1]
+                    t_1 = TravelRoute(by='', code='', price=0, des='', depart_time=-1,
+                                      duration=-1, is_tag=True, stay=stay)
+                    tmp_routes.append(t_1)
+                    # 更新最早可出发时间
+                    d_time = (d_time + cost + stay) % 24
+                # 更新最优路线
+                if tmp_total_cost < best_cost:
+                    best_cost = tmp_total_cost
+                    best_routes = list(tmp_routes)
+                iteration += 1
+            return best_routes
 
         else:
+            # 最终结果
+            ret = []
             d_time = depart_time
             for i in range(len(cities) - 1):
                 # 是否满足了时间限制
@@ -102,7 +146,7 @@ class Traveler(object):
                 # 将本段路径加入最终线路
                 ret.extend(tmp)
                 # 生成一个段标志对象
-                stay = cities[i + 1][1]
+                stay = cities[i + 1][2]
                 t_2 = TravelRoute(by='', code='', price=0, des='', depart_time=-1,
                                   duration=-1, is_tag=True, stay=stay,
                                   timelimit_satisfy=timelimit_satisfy)
@@ -116,8 +160,8 @@ class Traveler(object):
 
 T = Traveler()
 ret: [TravelRoute] = T.search_plan(
-    cities=['北京', ['重庆', 48], ['乌鲁木齐', 44], ['长沙', 25], ['北京', 20]],
-    depart_time=13, mode='best_time', vehicle='')
+    cities=['北京', ['重庆', 25], ['乌鲁木齐', 30], ['长沙', 48], ['南京', 11]],
+    depart_time=13, mode='best_price', vehicle='', ordered=True)
 for r in ret:
     if not r.is_tag:
         print(r.by, r.code, r.price, r.des, r.depart_time, r.duration)

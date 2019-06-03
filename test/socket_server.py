@@ -45,7 +45,7 @@ class Server:
 
     @staticmethod
     def send_file(sock):
-        print("here")
+        # print("here")
         # 设置接受数据大小，接受客户端发送来的文件路径
         # filepath = conn.recv(1024)
         # 读取客户端指定的文件

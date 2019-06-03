@@ -49,6 +49,10 @@ class TabuAlgorithm:
         routes_num = []
         result = []
         for route_length in range(1, 4):
+            if route_length == 1:
+                adj = self.adj_matrix[from_to[0]][from_to[1]]
+                if adj["train"] == [] and adj['air'] == [] and adj['bullet'] == []:
+                    continue
             search = TabuSearch(adj_matrix=self.adj_matrix, from_to=from_to, depart_time=depart_time,
                                 time_limit=time_limit, routes_count=routes_count,
                                 max_iteration=max_iteration, candidates_num=candidates_num,

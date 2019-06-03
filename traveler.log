@@ -1,0 +1,445 @@
+2019-06-02 17:24:30	Program init!
+2019-06-02 17:24:39	user: wmc register!
+2019-06-02 17:24:59	user: lms register!
+2019-06-02 17:25:02	user: lms login!
+2019-06-02 17:25:06	user: lms logout!
+2019-06-02 17:25:22	user: kmm register!
+2019-06-02 17:25:27	user: kmm login!
+2019-06-02 17:25:28	user: kmm logout!
+2019-06-02 17:25:31	user: kmm login!
+2019-06-02 17:25:32	user: kmm logout!
+2019-06-02 17:25:48	Program quit!
+2019-06-02 17:26:15	Program init!
+2019-06-02 17:27:08	Program quit!
+2019-06-02 17:27:41	Program init!
+2019-06-02 17:27:56	user: wmc register!
+2019-06-02 17:28:06	user: wmc login!
+2019-06-02 17:28:08	user: wmc logout!
+2019-06-02 17:28:10	user: wmc login!
+2019-06-02 17:28:11	user: wmc logout!
+2019-06-02 17:31:04	Program init!
+2019-06-02 17:31:14	user: wmc register!
+2019-06-02 17:31:20	user: wmc login!
+2019-06-02 17:31:22	user: wmc logout!
+2019-06-02 17:32:01	Program quit!
+2019-06-02 17:35:45	Program init!
+2019-06-02 17:35:54	user: wmc register!
+2019-06-02 17:35:56	user: wmc login!
+2019-06-02 17:35:58	user: wmc logout!
+2019-06-02 17:36:08	user: wmc login!
+2019-06-02 17:36:10	user: wmc logout!
+2019-06-02 17:36:13	user: wmc login!
+2019-06-02 17:36:14	user: wmc logout!
+2019-06-02 17:36:17	user: wmc login!
+2019-06-02 17:36:18	user: wmc logout!
+2019-06-02 17:36:24	user: wmc login!
+2019-06-02 17:36:26	user: wmc logout!
+2019-06-02 17:36:28	user: wmc login!
+2019-06-02 17:36:29	user: wmc logout!
+2019-06-02 17:36:40	user: ccc register!
+2019-06-02 17:36:43	user: ccc login!
+2019-06-02 17:36:44	user: ccc logout!
+2019-06-02 17:36:46	user: ccc login!
+2019-06-02 17:36:47	user: ccc logout!
+2019-06-02 17:36:49	user: ccc login!
+2019-06-02 17:36:50	user: ccc logout!
+2019-06-02 17:36:53	user: ccc login!
+2019-06-02 17:37:15	user: ccc queries!
+2019-06-02 17:37:46	Program init!
+2019-06-02 17:38:34	user: wmc register!
+2019-06-02 17:38:38	user: wmc login!
+2019-06-02 17:39:05	user: wmc queries!
+2019-06-02 17:39:32	Program init!
+2019-06-02 17:39:48	user: wmc register!
+2019-06-02 17:39:53	user: wmc login!
+2019-06-02 17:40:10	user: wmc queries!
+2019-06-02 17:42:36	Program init!
+2019-06-02 17:42:41	user: 123 register!
+2019-06-02 17:42:45	user: 123 login!
+2019-06-02 17:43:43	user: 123 queries!
+2019-06-02 17:52:24	Program init!
+2019-06-02 17:52:33	user: 123 register!
+2019-06-02 17:52:38	user: 123 login!
+2019-06-02 17:53:35	Program init!
+2019-06-02 17:53:41	user: 123 register!
+2019-06-02 17:53:44	user: 123 login!
+2019-06-02 18:00:35	Program init!
+2019-06-02 18:00:42	user: 123 register!
+2019-06-02 18:00:44	user: 123 login!
+2019-06-02 18:01:42	Program init!
+2019-06-02 18:01:47	user: 123 register!
+2019-06-02 18:01:49	user: 123 login!
+2019-06-02 18:01:59	user: 123 queries!
+2019-06-02 18:02:09	user: 123 simulates!
+2019-06-02 18:03:02	user: 123 queries!
+2019-06-02 18:03:11	user: 123 simulates!
+2019-06-02 18:03:27	user: 123 logout!
+2019-06-02 18:03:31	user: 123 login!
+2019-06-02 18:03:34	user: 123 queries!
+2019-06-02 18:04:27	user: 123 logout!
+2019-06-02 18:04:43	Program init!
+2019-06-02 18:04:52	user: 123 login!
+2019-06-02 18:04:57	user: 123 logout!
+2019-06-02 18:04:58	Program quit!
+2019-06-02 18:05:01	Program init!
+2019-06-02 18:05:05	user: 123 login!
+2019-06-02 18:05:15	user: 123 logout!
+2019-06-02 18:05:16	Program quit!
+2019-06-02 18:10:29	Program init!
+2019-06-02 18:10:39	user: wmc register!
+2019-06-02 18:10:42	user: wmc login!
+2019-06-02 18:11:35	user: wmc queries!
+2019-06-02 18:11:52	user: wmc simulates!
+2019-06-02 18:12:59	user: wmc queries!
+2019-06-02 18:13:26	user: wmc queries!
+2019-06-02 18:13:32	user: wmc queries!
+2019-06-02 18:13:39	user: wmc queries!
+2019-06-02 18:13:50	user: wmc queries!
+2019-06-02 18:14:07	user: wmc queries!
+2019-06-02 18:14:28	user: wmc queries!
+2019-06-02 18:14:39	user: wmc queries!
+2019-06-02 18:14:46	user: wmc simulates!
+2019-06-02 18:14:46	user: wmc simulates!
+2019-06-02 18:15:14	user: wmc simulates!
+2019-06-02 18:15:36	user: wmc queries!
+2019-06-02 18:15:37	user: wmc simulates!
+2019-06-02 18:18:56	Program init!
+2019-06-02 18:20:04	Program init!
+2019-06-02 18:20:13	user: wmc register!
+2019-06-02 18:20:15	user: wmc login!
+2019-06-02 18:20:18	user: wmc logout!
+2019-06-02 18:20:25	user: wmc login!
+2019-06-02 18:20:27	user: wmc logout!
+2019-06-02 18:20:34	user: lms register!
+2019-06-02 18:20:36	user: lms login!
+2019-06-02 18:20:38	user: lms logout!
+2019-06-02 18:20:42	user: lms login!
+2019-06-02 18:20:43	user: lms logout!
+2019-06-02 18:20:46	user: lms login!
+2019-06-02 18:20:47	user: lms logout!
+2019-06-02 18:20:50	Program quit!
+2019-06-02 18:20:50	user: lms logout!
+2019-06-02 18:24:51	Program init!
+2019-06-02 18:25:07	user: hhh register!
+2019-06-02 18:25:09	user: hhh login!
+2019-06-02 18:25:11	user: hhh logout!
+2019-06-02 18:25:13	Program quit!
+2019-06-02 18:25:18	Program init!
+2019-06-02 18:25:28	user: wmc login!
+2019-06-02 18:25:31	user: wmc logout!
+2019-06-02 18:25:37	Program quit!
+2019-06-02 18:46:54	Program init!
+2019-06-02 18:47:09	user: wmc register!
+2019-06-02 18:47:19	user: wmc login!
+2019-06-02 18:48:02	user: wmc queries!
+2019-06-02 18:48:36	user: wmc logout!
+2019-06-02 18:48:39	Program quit!
+2019-06-02 18:58:33	Program init!
+2019-06-02 18:58:45	user: wmc register!
+2019-06-02 18:58:47	user: wmc login!
+2019-06-02 19:00:06	user: wmc queries!
+2019-06-02 19:00:28	user: wmc queries!
+2019-06-02 19:00:39	user: wmc logout!
+2019-06-02 19:00:45	Program quit!
+2019-06-02 19:02:02	Program init!
+2019-06-02 19:02:15	user: wmc login!
+2019-06-02 19:02:34	Program init!
+2019-06-02 19:02:43	user: lms register!
+2019-06-02 19:06:38	user: wmc logout!
+2019-06-02 19:06:41	Program quit!
+2019-06-02 19:06:46	Program init!
+2019-06-02 19:06:59	user: wmc login!
+2019-06-02 19:07:07	Program init!
+2019-06-02 19:07:16	user: lms register!
+2019-06-02 19:07:29	user: lms login!
+2019-06-02 19:09:15	user: lms queries!
+2019-06-02 19:09:23	user: lms logout!
+2019-06-02 19:11:25	user: lms login!
+2019-06-02 19:12:19	user: lms logout!
+2019-06-02 19:12:21	Program quit!
+2019-06-02 19:13:56	user: wmc logout!
+2019-06-02 19:14:01	Program quit!
+2019-06-02 19:14:12	Program init!
+2019-06-02 19:14:27	user: 123 register!
+2019-06-02 19:14:31	user: 123 login!
+2019-06-02 19:14:52	user: 123 logout!
+2019-06-02 20:01:49	Program init!
+2019-06-02 20:05:47	Program init!
+2019-06-02 20:05:57	user: wmc register!
+2019-06-02 20:33:21	Program quit!
+2019-06-02 20:37:10	Program init!
+2019-06-02 20:37:35	user: lms register!
+2019-06-02 20:37:44	user: wmc login!
+2019-06-02 20:38:04	user: wmc queries!
+2019-06-02 20:38:16	user: wmc logout!
+2019-06-02 20:44:45	Program init!
+2019-06-02 20:45:01	user: lms register!
+2019-06-02 20:45:14	user: wmc login!
+2019-06-02 20:45:36	user: wmc queries!
+2019-06-02 20:45:48	user: wmc logout!
+2019-06-02 21:29:44	Program init!
+2019-06-02 21:29:56	user: lms register!
+2019-06-02 21:30:00	user: lms login!
+2019-06-02 21:30:17	user: lms queries!
+2019-06-02 21:30:21	user: lms logout!
+2019-06-02 21:33:20	Program init!
+2019-06-02 21:33:29	user: lms register!
+2019-06-02 21:33:32	user: lms login!
+2019-06-02 21:33:33	user: lms logout!
+2019-06-02 21:33:43	user: lms login!
+2019-06-02 21:33:45	user: lms logout!
+2019-06-02 21:33:46	Program quit!
+2019-06-02 21:33:56	Program init!
+2019-06-02 21:34:07	user: lms login!
+2019-06-02 21:34:26	user: lms queries!
+2019-06-02 21:37:29	user: lms queries!
+2019-06-02 21:37:35	user: lms queries!
+2019-06-02 21:37:42	user: lms logout!
+2019-06-02 21:40:23	Program init!
+2019-06-02 21:40:34	user: lms register!
+2019-06-02 21:40:37	user: lms login!
+2019-06-02 21:40:44	user: lms logout!
+2019-06-02 21:40:46	Program quit!
+2019-06-02 21:40:50	Program init!
+2019-06-02 21:41:34	user: lms login!
+2019-06-02 21:41:57	user: lms queries!
+2019-06-02 21:42:05	user: lms logout!
+2019-06-02 21:45:44	Program init!
+2019-06-02 21:45:58	user: lms register!
+2019-06-02 21:46:02	user: lms login!
+2019-06-02 21:46:15	user: lms queries!
+2019-06-02 21:46:23	user: lms logout!
+2019-06-02 21:46:29	user: lms login!
+2019-06-02 21:46:39	user: lms queries!
+2019-06-02 21:46:44	user: lms logout!
+2019-06-02 21:55:17	Program init!
+2019-06-02 21:55:34	user: sxm register!
+2019-06-02 21:55:44	user: sxm login!
+2019-06-02 21:56:14	user: sxm queries!
+2019-06-02 21:56:21	user: sxm logout!
+2019-06-02 21:56:22	Program quit!
+2019-06-02 21:56:33	Program init!
+2019-06-02 21:56:41	user: sxm login!
+2019-06-02 21:56:45	user: sxm logout!
+2019-06-02 21:56:50	user: sxm login!
+2019-06-02 21:56:52	user: sxm logout!
+2019-06-02 21:56:57	user: sxm login!
+2019-06-02 21:56:59	user: sxm queries!
+2019-06-02 21:57:01	user: sxm simulates!
+2019-06-02 21:57:35	user: sxm queries!
+2019-06-02 21:57:56	user: sxm queries!
+2019-06-02 21:58:13	user: sxm logout!
+2019-06-02 21:58:28	user: sxm login!
+2019-06-02 21:59:06	user: sxm queries!
+2019-06-02 21:59:19	user: sxm logout!
+2019-06-02 22:03:00	Program init!
+2019-06-02 22:03:15	user: lms register!
+2019-06-02 22:03:17	user: lms login!
+2019-06-02 22:03:26	user: lms queries!
+2019-06-02 22:03:30	user: lms logout!
+2019-06-02 22:05:20	Program init!
+2019-06-02 22:05:41	user: lms register!
+2019-06-02 22:05:45	user: lms login!
+2019-06-02 22:05:53	user: lms queries!
+2019-06-02 22:06:03	user: lms logout!
+2019-06-02 22:06:14	user: lms login!
+2019-06-02 22:06:29	user: lms queries!
+2019-06-02 22:06:48	user: lms logout!
+2019-06-02 22:06:56	user: lms login!
+2019-06-02 22:07:09	user: lms queries!
+2019-06-02 22:07:17	user: lms logout!
+2019-06-02 22:11:36	Program init!
+2019-06-02 22:11:50	user: lms register!
+2019-06-02 22:11:52	user: lms login!
+2019-06-02 22:12:02	user: lms queries!
+2019-06-02 22:12:12	user: lms logout!
+2019-06-02 22:12:16	user: lms login!
+2019-06-02 22:12:25	user: lms queries!
+2019-06-02 22:12:32	user: lms logout!
+2019-06-02 22:12:37	user: lms login!
+2019-06-02 22:12:46	user: lms queries!
+2019-06-02 22:12:51	user: lms logout!
+2019-06-02 22:12:55	user: lms login!
+2019-06-02 22:13:00	user: lms queries!
+2019-06-02 22:13:04	user: lms logout!
+2019-06-02 22:13:05	Program quit!
+2019-06-02 22:13:09	Program init!
+2019-06-02 22:13:14	user: lms login!
+2019-06-02 22:13:17	user: lms logout!
+2019-06-02 22:14:04	Program init!
+2019-06-02 22:14:15	user: sa register!
+2019-06-02 22:14:22	user: sa login!
+2019-06-02 22:14:27	user: sa logout!
+2019-06-02 22:14:29	Program quit!
+2019-06-02 22:14:32	Program init!
+2019-06-02 22:14:36	user: lms login!
+2019-06-02 22:14:45	user: lms logout!
+2019-06-02 22:14:46	Program quit!
+2019-06-02 22:14:50	Program init!
+2019-06-02 22:14:55	user: lms login!
+2019-06-02 22:14:56	user: lms logout!
+2019-06-02 22:15:04	user: sa login!
+2019-06-02 22:15:11	user: sa queries!
+2019-06-02 22:15:16	user: sa logout!
+2019-06-02 22:15:20	user: sa login!
+2019-06-02 22:15:21	user: sa logout!
+2019-06-02 22:15:27	user: lms login!
+2019-06-02 22:15:33	user: lms logout!
+2019-06-02 22:15:35	Program quit!
+2019-06-02 22:15:38	Program init!
+2019-06-02 22:17:07	user: sa login!
+2019-06-02 22:17:30	user: sa queries!
+2019-06-02 22:17:36	user: sa logout!
+2019-06-02 22:17:37	Program quit!
+2019-06-02 22:19:05	Program init!
+2019-06-02 22:27:01	Program init!
+2019-06-02 22:27:50	user: lms register!
+2019-06-02 22:28:15	user: sa register!
+2019-06-02 22:28:24	user: sa login!
+2019-06-02 22:29:33	user: sa queries!
+2019-06-02 22:30:35	user: sa logout!
+2019-06-02 22:31:54	Program init!
+2019-06-02 22:32:09	user: lms register!
+2019-06-02 22:32:11	user: lms login!
+2019-06-02 22:32:21	user: lms queries!
+2019-06-02 22:32:26	user: lms logout!
+2019-06-02 22:32:32	user: lms login!
+2019-06-02 22:32:38	user: lms queries!
+2019-06-02 22:32:43	user: lms logout!
+2019-06-02 22:33:25	user: sa register!
+2019-06-02 22:33:29	user: sa login!
+2019-06-02 22:33:37	user: sa queries!
+2019-06-02 22:33:51	user: sa logout!
+2019-06-02 22:34:05	user: lms login!
+2019-06-02 22:35:11	user: lms logout!
+2019-06-02 22:46:47	Program init!
+2019-06-02 22:47:01	user: lms register!
+2019-06-02 22:47:20	user: sa register!
+2019-06-02 22:47:22	user: sa login!
+2019-06-02 22:48:01	user: sa logout!
+2019-06-02 22:48:19	user: lms login!
+2019-06-02 22:49:04	user: lms queries!
+2019-06-02 22:49:26	user: lms logout!
+2019-06-02 22:49:35	user: lms login!
+2019-06-02 22:50:30	user: lms logout!
+2019-06-03 02:08:35	Program init!
+2019-06-03 02:10:49	user: lms login!
+2019-06-03 02:12:38	user: lms queries!
+2019-06-03 02:12:43	user: lms queries!
+2019-06-03 02:13:14	user: lms simulates!
+2019-06-03 02:15:15	user: lms logout!
+2019-06-03 02:15:17	Program quit!
+2019-06-03 02:21:26	Program init!
+2019-06-03 02:21:34	user: lms login!
+2019-06-03 04:15:45	Program init!
+2019-06-03 04:19:19	user: lms login!
+2019-06-03 04:22:17	user: lms queries!
+2019-06-03 04:22:38	user: lms logout!
+2019-06-03 04:22:39	Program quit!
+2019-06-03 04:40:22	Program init!
+2019-06-03 04:40:27	user: lms login!
+2019-06-03 04:41:02	user: lms queries!
+2019-06-03 04:41:11	user: lms logout!
+2019-06-03 04:41:12	Program quit!
+2019-06-03 04:45:56	Program init!
+2019-06-03 04:46:02	user: lms login!
+2019-06-03 04:46:12	user: lms queries!
+2019-06-03 11:41:03	Program init!
+2019-06-03 11:41:10	user: lms login!
+2019-06-03 11:43:40	user: lms queries!
+2019-06-03 11:49:45	user: lms queries!
+2019-06-03 11:51:58	user: lms queries!
+2019-06-03 12:01:50	user: lms queries!
+2019-06-03 12:06:45	user: lms queries!
+2019-06-03 12:09:56	user: lms queries!
+2019-06-03 12:25:20	Program init!
+2019-06-03 12:25:32	user: lms register!
+2019-06-03 12:25:37	user: lms login!
+2019-06-03 12:25:46	user: lms queries!
+2019-06-03 12:25:54	user: lms logout!
+2019-06-03 12:26:03	user: lms login!
+2019-06-03 12:26:35	user: lms queries!
+2019-06-03 12:26:45	user: lms queries!
+2019-06-03 12:26:50	user: lms logout!
+2019-06-03 12:26:51	Program quit!
+2019-06-03 12:26:55	Program init!
+2019-06-03 12:27:06	user: lms login!
+2019-06-03 12:27:09	user: lms logout!
+2019-06-03 12:27:21	user: QJ register!
+2019-06-03 12:27:24	user: QJ login!
+2019-06-03 12:28:59	user: QJ queries!
+2019-06-03 12:30:50	Program init!
+2019-06-03 12:35:39	user: QJ login!
+2019-06-03 12:36:31	user: QJ queries!
+2019-06-03 12:36:40	user: QJ logout!
+2019-06-03 12:54:56	Program init!
+2019-06-03 12:55:07	user: lms register!
+2019-06-03 12:55:11	Program quit!
+2019-06-03 12:55:49	Program init!
+2019-06-03 12:56:24	user: lms register!
+2019-06-03 12:56:29	user: lms login!
+2019-06-03 12:57:54	user: lms queries!
+2019-06-03 12:58:04	user: lms logout!
+2019-06-03 13:03:54	Program init!
+2019-06-03 13:06:01	Program init!
+2019-06-03 13:06:44	user: lightning register!
+2019-06-03 13:06:48	user: lightning login!
+2019-06-03 13:08:15	user: lightning queries!
+2019-06-03 13:08:29	user: lightning simulates!
+2019-06-03 13:08:33	user: lightning simulates!
+2019-06-03 13:08:33	user: lightning simulates!
+2019-06-03 13:08:33	user: lightning simulates!
+2019-06-03 13:08:33	user: lightning simulates!
+2019-06-03 13:08:33	user: lightning simulates!
+2019-06-03 13:08:34	user: lightning simulates!
+2019-06-03 13:08:34	user: lightning simulates!
+2019-06-03 13:08:34	user: lightning simulates!
+2019-06-03 13:08:34	user: lightning simulates!
+2019-06-03 13:08:34	user: lightning simulates!
+2019-06-03 13:08:34	user: lightning simulates!
+2019-06-03 13:08:36	user: lightning simulates!
+2019-06-03 13:08:41	user: lightning simulates!
+2019-06-03 13:08:51	user: lightning simulates!
+2019-06-03 13:09:35	user: lightning queries!
+2019-06-03 13:09:50	user: lightning queries!
+2019-06-03 13:09:59	user: lightning queries!
+2019-06-03 13:10:00	user: lightning simulates!
+2019-06-03 13:10:50	user: lightning logout!
+2019-06-03 13:11:15	Program init!
+2019-06-03 13:11:45	Program quit!
+2019-06-03 13:11:49	Program init!
+2019-06-03 13:14:07	Program init!
+2019-06-03 13:30:37	Program init!
+2019-06-03 13:30:54	user: Lms register!
+2019-06-03 13:30:59	user: Lms login!
+2019-06-03 13:31:19	user: Lms queries!
+2019-06-03 13:31:45	user: Lms logout!
+2019-06-03 13:32:03	user: LMs register!
+2019-06-03 13:32:08	user: LMs login!
+2019-06-03 13:32:10	user: LMs logout!
+2019-06-03 13:32:18	user: Lms login!
+2019-06-03 13:32:20	user: Lms logout!
+2019-06-03 13:32:22	Program quit!
+2019-06-03 13:32:26	Program init!
+2019-06-03 13:32:44	user: LMS register!
+2019-06-03 13:32:49	user: LMS login!
+2019-06-03 13:33:13	user: LMS logout!
+2019-06-03 14:14:54	Program init!
+2019-06-03 14:15:08	user: wmc register!
+2019-06-03 14:15:11	user: wmc login!
+2019-06-03 14:15:37	user: wmc queries!
+2019-06-03 14:15:46	user: wmc simulates!
+2019-06-03 14:15:48	user: wmc simulates!
+2019-06-03 14:16:08	user: wmc logout!
+2019-06-03 14:16:10	Program quit!
+2019-06-03 15:27:42	Program init!
+2019-06-03 15:27:49	user: wmc register!
+2019-06-03 15:27:51	user: wmc login!
+2019-06-03 15:28:16	user: wmc queries!
+2019-06-03 15:28:21	user: wmc simulates!
+2019-06-03 15:28:21	user: wmc simulates!
+2019-06-03 15:28:35	user: wmc logout!
+2019-06-03 15:28:37	Program quit!
+2019-06-03 15:33:23	Program init!
+2019-06-03 15:33:39	user: wmc login!
+2019-06-03 15:41:15	user: wmc logout!
